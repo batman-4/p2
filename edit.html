@@ -8,7 +8,7 @@
 </head>
 
 <style>
-    input[type=text], select {
+    input[type="text"], select {
         width: 100%;
         padding: 12px 20px;
         margin: 8px 0;
@@ -18,7 +18,7 @@
         box-sizing: border-box;
     }
 
-    input[type=submit] {
+    input[type="button"] {
         width: 100%;
         background-color: #61a1e0;
         color: rgb(255, 255, 255);
@@ -29,7 +29,7 @@
         cursor: pointer;
     }
 
-    input[type=submit]:hover {
+    input[type="button"]:hover {
         background-color: #454ba0;
     }
 
@@ -52,27 +52,27 @@
         if(name.value == '') {
         	alert("please enter name");
             name.focus();
-            return;
+            return false;
         }
-        if(birthday.value == '') {
+        if(birthday.value === '') {
         	alert("please enter birthdate");
             birthday.focus();
-            return;
+            return false;
         }
-        if(semester.value == '') {
+        if(semester.value === '') {
         	alert("please enter grade");
             semester.focus();
-            return;
+            return false;
         }
         if(sid.value == '') {
         	alert("please enter student ID");
             sid.focus();
-            return;
+            return false;
         }
-        if(enrolment.value == '') {
+        if(enrolment.value === '') {
         	alert("please enter enrolment date");
             enrolment.focus();
-            return;
+            return false;
         }
         
         //document.form1.submit();
