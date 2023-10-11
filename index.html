@@ -15,20 +15,20 @@
 
 <script>
 	function check(){
-    	var userid = document.form1.userid;
-        var passwd = document.form1.passwd;
-        if(userid.value == '') {
-        	alert("please enter userid");
-            userid.focus();
+    	var name = document.form1.fname;
+        var sid = document.form1.id;
+        if(name.value == '') {
+        	alert("please enter name");
+            name.focus();
             return;
         }
-        if(passwd.value == '') {
-        	alert("please enter passwd");
-            passwd.focus();
+        if(sid.value == '') {
+        	alert("please enter student ID");
+            sid.focus();
             return;
         }
         
-        document.form1.submit();
+        //document.form1.submit();
     }
     
     function changeColor() {
@@ -61,7 +61,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <body>
-    <h1>Student Information</h1>
+    <h1>Handong Student Information</h1>
     <p>Handong Students' Information Records:<br><br></p>
 
     <div class="container">

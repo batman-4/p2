@@ -44,15 +44,34 @@
 <script>
     function check(){
     	var name = document.form1.fname;
+        var birthday = document.form1.birthday;
+        var semester = document.form1.semester;
         var sid = document.form1.id;
+        var enrolment = document.form1.enrolment;
+
         if(name.value == '') {
         	alert("please enter name");
             name.focus();
             return;
         }
+        if(birthday.value == '') {
+        	alert("please enter birthdate");
+            birthday.focus();
+            return;
+        }
+        if(semester.value == '') {
+        	alert("please enter grade");
+            semester.focus();
+            return;
+        }
         if(sid.value == '') {
         	alert("please enter student ID");
             sid.focus();
+            return;
+        }
+        if(enrolment.value == '') {
+        	alert("please enter enrolment date");
+            enrolment.focus();
             return;
         }
         
@@ -103,7 +122,7 @@
             <textarea id="others" name="otherMajor" rows="1" cols="30"></textarea><br><br>
 
             <label for="enrolment">Enrolment date:</label>
-            <input type="date" id="enrollment" name="enrollment_date"><br><br>
+            <input type="date" id="enrolment" name="enrolment"><br><br>
 
             <button type="button" class="btn btn-primary" onclick="check();">Submit</button>
         </div>
