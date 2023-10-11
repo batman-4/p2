@@ -92,8 +92,10 @@
                 <td>21800001</td>
                 <td>Senior</td>
                 <td>
-                    <a href='edit.html' class="btn btn-link">Modify</button>
-                    <button type="button" class="btn btn-link" onclick="confirmDelete();">Delete</button>
+                    <div class="btn-group">
+                        <a href="edit.html" class="btn btn-link" role="button">Modify</button>
+                        <button type="button" class="btn btn-link" onmouseover="changeColor" onmouseout="revertColor" onclick="confirmDelete();">Delete</button>
+                    </div>
                 </td>
               </tr>
           </tbody>
