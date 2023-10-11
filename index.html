@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Front Page</title>
+</head>
+
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+
+<script>
+	function check(){
+    	var userid = document.form1.userid;
+        var passwd = document.form1.passwd;
+        if(userid.value == '') {
+        	alert("please enter userid");
+            userid.focus();
+            return;
+        }
+        if(passwd.value == '') {
+        	alert("please enter passwd");
+            passwd.focus();
+            return;
+        }
+        
+        document.form1.submit();
+    }
+    
+    function changeColor() {
+      document.getElementById("myElement").style.backgroundColor = "yellow";
+    }
+
+    function revertColor() {
+      document.getElementById("myElement").style.backgroundColor = "white";
+    }
+    	
+    function keyDownFunction(event) {
+      if (event.keyCode === 13) {
+        check();
+      }
+    }
+
+    function confirmDelete() {
+        var result = window.confirm("게시물을 삭제할까요?");
+        // if (result) {
+        //     alert("Item has been deleted.");
+        // } else {
+        //     alert("Canceled.");
+        // }
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="dashboard.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<body>
+    <h1>Student Information</h1>
+    <p>Handong Students' Information Records:<br><br></p>
+
+    <div class="container">
+        <input type="text" id="fname" name="fname" value="Search for a name">
+        <button type="button" class="btn btn-info">Search</button>
+    
+        <a href='add.html' class="btn btn-info" role="button">Add</a>
+    </div>
+
+    <h2>Information List</h2>
+    <div class="table-responsive">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th><a href="view.html" class="btn" role="button">No.</a></th>
+              <th><a href="view.html" class="btn" role="button">First Name</a></th>
+              <th><a href="view.html" class="btn" role="button">Birthdate</a></th>
+              <th><a href="view.html" class="btn" role="button">ID Number</a></th>
+              <th><a href="view.html" class="btn" role="button">Current Grade</a></th>
+              <th><a href="view.html" class="btn" role="button">Menu</a></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bobby</td>
+                <td>2000.01.01</td>
+                <td>21800001</td>
+                <td>Senior</td>
+                <td>
+                    <a href='edit.html' class="btn btn-link">Modify</button>
+                    <button type="button" class="btn btn-link" onclick="confirmDelete();">Delete</button>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
